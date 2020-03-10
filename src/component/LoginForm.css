@@ -1,0 +1,16 @@
+.plain{
+    text-align: center;
+    margin-right:auto;
+    margin-left:auto;
+}
+input
+{
+    margin-left: 20px;
+    border:none;
+    background: none;
+    border-bottom: 1px solid black;
+    font-family: 'Nanum Myeongjo', serif;
+    font-weight: bold;
+    font-size: 24px;
+;
+}

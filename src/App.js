@@ -14,7 +14,7 @@ function App() {
   const logout = () => setUser(null);
   return (
     <Router>
-      <header><Link to="/"><button>Simple Board <span>by LSS</span></button></Link></header>
+      <header><Link to="/"><button>간단 게시판</button></Link></header>
       <header style={{textAlign:'right',
       marginTop:"-30px"
       }}>

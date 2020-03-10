@@ -4,3 +4,6 @@ button{
     font-weight: bold;
     font-size: 25px;
 }
+button:focus{
+    outline: none;
+}

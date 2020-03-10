@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-function Data() {
+function CallUserData() {
     const [userData, setUserData] = useState([]);
     fetch('/user')
         .then(res => res.json())
@@ -20,4 +20,4 @@ function Data() {
     </div>)
 }
 
-export default Data;
+export default CallUserData;

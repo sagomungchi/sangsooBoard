@@ -1,15 +1,35 @@
-import React,{useState} from 'react';
+import React, {useState} from 'react';
 
-function Data(){
-    const [data,setData] = useState({});
-    fetch('/data')
-        .then(res=>res.json())
-        .then(data=>setData(data),()=>{
-      console.log('data read : ', data);
-    });
+function Data() {
+    const [userData, setUserData] = useState([]);
+    fetch('/user')
+        .then(res => res.json())
+        .then(data => setUserData(data));
 
-    return(<div>
-        {data.lastname} {data.firstname}
+    const[contentData,setContentData] = useState([]);
+    fetch('/content')
+        .then(res =>res.json())
+        .then(data => setContentData(data));
+
+    return (<div>
+        {
+            userData.map(
+                data=>(
+                    <div key={data.key}>
+                        {data.id}
+                    </div>
+                )
+            )
+        }
+        {
+            contentData.map(
+                data=>(
+                    <div key={data.key}>
+                        {data.title}
+                    </div>
+                )
+            )
+        }
     </div>)
 }
 
